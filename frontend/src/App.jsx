@@ -1,8 +1,8 @@
 import React from 'react'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route } from 'react-router-dom'
 import Home from './components/home.jsx'
 import Dashboard from './components/dashboard.jsx'
-import PrivateRouter from './components/privateRouter.jsx'
+import PrivateRouter from './components/privateRoute.jsx'
 
 function App() {
   return (
