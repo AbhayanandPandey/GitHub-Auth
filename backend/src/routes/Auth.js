@@ -7,7 +7,7 @@ const axios = require('axios');
 const cookieParser = require('cookie-parser');
 const app = express();
 app.use(cookieParser());
-const {logoutUser} = require('../controllers/ath.controller.js');
+const {logoutUser} = require('../controllers/Auth.controller.js');
 
 router.get('/github', (req, res) => {
     const params = new URLSearchParams({
@@ -61,6 +61,7 @@ router.get('/github/callback', async (req, res) => {
         secure: false, 
         maxAge: 1000 * 60 * 60 * 24 * 7,
       });
+
     const query = new URLSearchParams(userData).toString();
 
     res.redirect(`http://localhost:5173/dashboard?${query}`);
