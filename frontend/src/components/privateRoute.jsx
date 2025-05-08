@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 export default function ProtectedRoute({ children }) {
-  const token = Cookies.get('jwtGithub'); 
+  const token = Cookies.get('GithubToken'); 
 
   if (!token) {
     return <Navigate to="/" replace />; 
